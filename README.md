@@ -13,7 +13,8 @@ This document explains how to update product pages on the Firefox Fake Door webs
 In order to add products to the Fake Door site, you'll first need to make sure you have the correct dependencies installed on your comupter. You can install these from the command line
 
 In order to get started you'll need:
-1.To make sure you have a GitHub account and have Git running and configured on your local machine. [docs](https://help.github.com/articles/set-up-git/).
+
+1. To make sure you have a GitHub account and have Git running and configured on your local machine. [docs](https://help.github.com/articles/set-up-git/).
 2. To make sure you are a contributor on this repo. Talk to John, Mark or Wil about this one.
 3. A Text editor like [VSCode](https://code.visualstudio.com/).
 4. Modest familiarity with the Terminal app on your computer.
