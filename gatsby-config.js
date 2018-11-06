@@ -1,7 +1,7 @@
 module.exports = {
   pathPrefix: '/fake-door',
   siteMetadata: {
-    title: 'Firefox Fake Door',
+    title: 'Firefox Concepts',
     description: 'A simple splash site generator for evaluating product concepts',
     repo: 'https://github.com/johngruen'
   },
