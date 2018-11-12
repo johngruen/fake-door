@@ -9,7 +9,7 @@ const ProductFacets = ({ facets, bgColor }) =>
     {facets.map((facet, index) => {
       return (
         <div className="product-facet" key={index}>
-          {index % 2 === 0 && <div className="product-facet__bg" style={{ background: `linear-gradient(135deg, ${bgColor},${lightenDarkenColor(bgColor,-60)})`}}/>}
+          {index % 2 === 0 && <div className="product-facet__bg" style={{ background: `linear-gradient(135deg, ${bgColor},${lightenDarkenColor(bgColor,-20)})`}}/>}
           <section>
             <div className="product-facet__content">
               <h2>{facet.title}</h2>
