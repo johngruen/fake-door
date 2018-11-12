@@ -13,7 +13,7 @@ const ProductGroup = ({ data }) => {
   return (
     <Layout meta={data.site.siteMetadata} rootClass="productGroup" title={data.markdownRemark.frontmatter.title}>
       <Header {...{ title, description }} parent={data.markdownRemark.frontmatter.title} />
-      <Products {...{ edges }} />
+      <Products {...{ edges, offerBranded: true }} />
       <Footer>
         <a href={data.site.siteMetadata.repo}>View Source</a>
       </Footer>

@@ -1,7 +1,7 @@
 @import '~photon-colors/photon-colors';
 
 .product-hero {
-  padding: 0 30px;
+  padding: 0 30px 20px;
   width: 100vw;
 
   header {
@@ -20,11 +20,6 @@
     cursor: pointer;
     font-size: 24px;
     padding: 16px 48px;
-
-    &:hover,
-    &:focus {
-      background: $blue-60;
-    }
   }
 
   .product-hero__content {

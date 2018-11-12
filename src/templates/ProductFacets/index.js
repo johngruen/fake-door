@@ -1,22 +1,15 @@
 import React from 'react'
 
-import './index.scss'
-import topCurve from './top-curve.svg'
-import bottomCurve from './bottom-curve.svg'
+import { lightenDarkenColor } from './../../utils/utils'
 
-const ProductFacets = ({ facets }) => (
+import './index.scss'
+
+const ProductFacets = ({ facets, bgColor }) =>
   <>
     {facets.map((facet, index) => {
       return (
         <div className="product-facet" key={index}>
-          <div
-            className="product-facet__top"
-            style={{ backgroundImage: `url(${topCurve})` }}
-          />
-          <div
-            className="product-facet__bottom"
-            style={{ backgroundImage: `url(${bottomCurve})` }}
-          />
+          {index % 2 === 0 && <div className="product-facet__bg" style={{ background: `linear-gradient(135deg, ${bgColor},${lightenDarkenColor(bgColor,-60)})`}}/>}
           <section>
             <div className="product-facet__content">
               <h2>{facet.title}</h2>
@@ -35,6 +28,5 @@ const ProductFacets = ({ facets }) => (
       )
     })}
   </>
-)
 
 export default ProductFacets
