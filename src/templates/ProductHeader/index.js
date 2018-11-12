@@ -8,7 +8,7 @@ const ProductHeader = ({ name, icon }) => (
       <h2>
         <span
           className="product-header__app-icon"
-          style={{ background: `url(${icon.publicURL})` }}
+          style={{ backgroundImage: `url(${icon})` }}
         />
         {name}
       </h2>

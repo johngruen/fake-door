@@ -1,6 +1,6 @@
 .product-facet {
   margin: 20px 0;
-  padding: 30px;
+  padding: 60px 30px;
   position: relative;
 
   section {
@@ -44,26 +44,17 @@
   }
 
   &:nth-child(odd) {
-    background: linear-gradient(#e1eff8, #cbe3f5);
-    padding: 60px 0;
 
-    .product-facet__top {
+    .product-facet__bg {
       background-size: 100% 60px;
-      height: 60px;
-      left: 0;
+      bottom: -30px;
+      left: -200px;
       position: absolute;
-      right: 0;
-      top: -60px;
-    }
-
-    .product-facet__bottom {
-      background-position: center top;
-      background-size: 100% 60px;
-      bottom: -60px;
-      height: 60px;
-      left: 0;
-      position: absolute;
-      right: 0;
+      right: -200px;
+      top: -30px;
+      transform-origin: center center;
+      transform: rotateZ(-1deg);
+      z-index: -1;
     }
 
     .product-facet__content {

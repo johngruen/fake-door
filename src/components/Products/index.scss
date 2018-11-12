@@ -2,20 +2,57 @@
 
 .products {
   display: grid;
+  grid-auto-rows: 240px;
   grid-gap: 24px;
   grid-template-columns: repeat(auto-fit, minmax(200px, 320px));
-  grid-auto-rows: 200px;
 }
 
 .products__card {
   background: $grey-10-a10;
   color: $white-100;
-  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
   text-decoration: none;
   transition: background 150ms;
   user-select: none;
-  &:hover,
-  &:focus {
-    background: $grey-10-a20;
+
+  .products__links {
+    display: flex;
+    width: 100%;
+  }
+
+  h3 {
+    padding: 16px 16px 0;
+  }
+
+  p {
+    flex: 1;
+    padding: 0 16px;
+  }
+
+  a {
+    align-items: center;
+    color: $white-100;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    text-decoration: none;
+    transition: background 120ms;
+    border: 1px solid $grey-10-a40;
+    flex: 1;
+    margin: 5px;
+
+    &:nth-child(2) {
+      margin-left: 0;
+    }
+
+    &:hover {
+      background: $grey-10-a10;
+    }
+
+    &:active {
+      background: $grey-10-a20;
+    }
   }
 }

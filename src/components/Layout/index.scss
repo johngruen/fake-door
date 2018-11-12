@@ -9,7 +9,7 @@
 .layout--productGroup {
   color: $white-100;
   grid-gap: 32px;
-  grid-template-rows: 200px 1fr;
+  grid-template-rows: auto 1fr;
   padding: 24px;
 }
 
