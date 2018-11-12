@@ -13,21 +13,30 @@ import './index.scss'
 import firefoxIcon from './../../images/firefox-logo.png'
 
 const Product = ({ data }) => {
-  const urlParams = new URLSearchParams(window.location.search)
-  const isFirefox =
-    urlParams.has('branding') && urlParams.get('branding') === 'firefox'
+  let urlParams, isFirefox, bgColor, buttonColor;
   let classList = 'product'
-  classList = isFirefox ? `${classList} product--is-firefox` : classList
 
-  let bgColor =
-    urlParams.has('bg') && isValidHex(urlParams.get('bg'))
-      ? urlParams.get('bg')
-      : 'd1e6f5'
+  // HACK: Node/Webpack don't support windows or URLSearchParams
+  // Could probably use a shim here, but this works
+  if (typeof window !== 'undefined') {
+    urlParams = new URLSearchParams(window.location.search)
+    isFirefox =
+      urlParams.has('branding') && urlParams.get('branding') === 'firefox'
+    classList = isFirefox ? `${classList} product--is-firefox` : classList
 
-  let buttonColor =
-    urlParams.has('button') && isValidHex(urlParams.get('button'))
-      ? urlParams.get('button')
-      : '0a84ff'
+    bgColor =
+      urlParams.has('bg') && isValidHex(urlParams.get('bg'))
+        ? urlParams.get('bg')
+        : 'd1e6f5'
+
+    buttonColor =
+      urlParams.has('button') && isValidHex(urlParams.get('button'))
+        ? urlParams.get('button')
+        : '0a84ff'
+  } else {
+    bgColor = 'd1e6f5'
+    buttonColor = '0a84ff'
+  }
 
   bgColor = `#${bgColor}`
   buttonColor = `#${buttonColor}`
