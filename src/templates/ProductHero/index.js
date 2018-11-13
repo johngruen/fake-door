@@ -10,7 +10,8 @@ const ProductHero = ({ hero, buttonColor }) => {
         <div className="product-hero__content">
           <h1>{title}</h1>
           <p>{text}</p>
-          <Link to="/"><button style={{backgroundColor: buttonColor}}>{cta}</button></Link>
+          {/* HACK: Gatsby will precompile css, so we force it not to */}
+          {typeof window !== 'undefined' && <Link to="/"><button style={{backgroundColor: buttonColor}}>{cta}</button></Link>}
         </div>
         <div className="product-hero__image">
           <img src={image.publicURL} alt={text} width="100%" height="auto" />

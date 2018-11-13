@@ -6,10 +6,11 @@ const ProductHeader = ({ name, icon }) => (
   <div className="product-header">
     <div className="product-header__container">
       <h2>
-        <span
+        {/* HACK: Gatsby will precompile css, so we force it not to */}
+        {typeof window !== 'undefined' && <span
           className="product-header__app-icon"
           style={{ backgroundImage: `url(${icon})` }}
-        />
+        />}
         {name}
       </h2>
       <ul>

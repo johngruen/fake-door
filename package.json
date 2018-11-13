@@ -37,7 +37,7 @@
     "develop": "rm -rf public && rm -rf .cache && gatsby develop",
     "format": "prettier --write '**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "rm -rf public && rm -rf .cache && gatsby build --prefix-paths && gh-pages -d public"
+    "deploy": "rm -rf public && rm -rf .cache && gatsby build --verbose --prefix-paths && gh-pages -d public"
   },
   "repository": {
     "type": "git"

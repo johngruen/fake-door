@@ -9,7 +9,8 @@ const ProductFacets = ({ facets, bgColor }) =>
     {facets.map((facet, index) => {
       return (
         <div className="product-facet" key={index}>
-          {index % 2 === 0 && <div className="product-facet__bg" style={{ background: `linear-gradient(135deg, ${bgColor},${lightenDarkenColor(bgColor,-20)})`}}/>}
+          {/* HACK: Gatsby will precompile css, so we force it not to */}
+          {typeof window !== 'undefined' && index % 2 === 0 && <div className="product-facet__bg" style={{ background: `linear-gradient(135deg, ${bgColor},${lightenDarkenColor(bgColor,-20)})`}}/>}
           <section>
             <div className="product-facet__content">
               <h2>{facet.title}</h2>
