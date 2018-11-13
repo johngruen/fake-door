@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[2],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[3],{
 
 /***/ 150:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -7,7 +7,7 @@
 __webpack_require__.r(__webpack_exports__);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es6.function.name.js
-var es6_function_name = __webpack_require__(167);
+var es6_function_name = __webpack_require__(168);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es6.regexp.search.js
 var es6_regexp_search = __webpack_require__(53);
@@ -162,23 +162,28 @@ var ProductHero_ProductHero = function ProductHero(_ref) {
       cta = _hero$.cta;
   var urlParams, buttonColor;
 
-  if (typeof URLSearchParams === 'function') {
-    urlParams = new URLSearchParams(window.location.search);
-    buttonColor = urlParams.has('button') && isValidHex(urlParams.get('button')) ? urlParams.get('button') : '0a84ff';
-  } else {
-    buttonColor = '0a84ff';
-  }
+  var getColor = function getColor() {
+    var bc;
 
-  buttonColor = "#" + buttonColor;
+    if (typeof URLSearchParams === 'function') {
+      urlParams = new URLSearchParams(window.location.search);
+      bc = urlParams.has('button') && isValidHex(urlParams.get('button')) ? urlParams.get('button') : '0a84ff';
+    } else {
+      bc = '0a84ff';
+    }
+
+    return "#" + bc;
+  };
+
   return react_default.a.createElement("div", {
     className: "product-hero"
   }, react_default.a.createElement("header", null, react_default.a.createElement("div", {
     className: "product-hero__content"
-  }, react_default.a.createElement("h1", null, title), react_default.a.createElement("p", null, text), react_default.a.createElement("p", null, buttonColor), react_default.a.createElement(gatsby_browser_entry["Link"], {
+  }, react_default.a.createElement("h1", null, title), react_default.a.createElement("p", null, text), react_default.a.createElement(gatsby_browser_entry["Link"], {
     to: "/"
   }, react_default.a.createElement("button", {
     style: {
-      backgroundColor: buttonColor
+      backgroundColor: getColor()
     }
   }, cta))), react_default.a.createElement("div", {
     className: "product-hero__image"
@@ -697,7 +702,7 @@ ProdPageRenderer.propTypes = {
 
 /***/ }),
 
-/***/ 167:
+/***/ 168:
 /***/ (function(module, exports, __webpack_require__) {
 
 var dP = __webpack_require__(25).f;
@@ -841,4 +846,4 @@ if (new Date(NaN) + '' != INVALID_DATE) {
 /***/ })
 
 }]);
-//# sourceMappingURL=component---src-templates-product-index-js-be710b2b6b9e8a2b5635.js.map
+//# sourceMappingURL=component---src-templates-product-index-js-063d58c3b5bcd2f17980.js.map
