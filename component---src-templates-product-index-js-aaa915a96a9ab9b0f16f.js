@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[2],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[3],{
 
 /***/ 150:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -10,7 +10,7 @@ __webpack_require__.r(__webpack_exports__);
 var es6_object_assign = __webpack_require__(33);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es6.function.name.js
-var es6_function_name = __webpack_require__(167);
+var es6_function_name = __webpack_require__(168);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es6.regexp.search.js
 var es6_regexp_search = __webpack_require__(53);
@@ -185,7 +185,7 @@ var ProductHero_ProductHero = function ProductHero(_ref) {
     className: "product-hero__content"
   }, react_default.a.createElement("h1", null, title), react_default.a.createElement("p", null, text), react_default.a.createElement(gatsby_browser_entry["Link"], {
     to: "/"
-  }, console.log('rendering'), react_default.a.createElement("button", {
+  }, console.log('rendering'), typeof window !== 'undefined' && react_default.a.createElement("button", {
     style: {
       backgroundColor: getColor()
     }
@@ -708,7 +708,7 @@ ProdPageRenderer.propTypes = {
 
 /***/ }),
 
-/***/ 167:
+/***/ 168:
 /***/ (function(module, exports, __webpack_require__) {
 
 var dP = __webpack_require__(25).f;
@@ -852,4 +852,4 @@ if (new Date(NaN) + '' != INVALID_DATE) {
 /***/ })
 
 }]);
-//# sourceMappingURL=component---src-templates-product-index-js-6351c0904ea37d95b8a2.js.map
+//# sourceMappingURL=component---src-templates-product-index-js-aaa915a96a9ab9b0f16f.js.map

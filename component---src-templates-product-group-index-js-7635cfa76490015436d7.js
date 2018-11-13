@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[3],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[2],{
 
 /***/ 146:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -613,4 +613,4 @@ var Products = function Products(_ref) {
 /***/ })
 
 }]);
-//# sourceMappingURL=component---src-templates-product-group-index-js-bc4bd81af546eabe01b9.js.map
+//# sourceMappingURL=component---src-templates-product-group-index-js-7635cfa76490015436d7.js.map
