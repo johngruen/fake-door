@@ -3134,11 +3134,11 @@ var preferDefault = function preferDefault(m) {
 };
 
 exports.components = {
-  "component---src-templates-product-group-index-js": function componentSrcTemplatesProductGroupIndexJs() {
-    return Promise.all(/* import() | component---src-templates-product-group-index-js */[__webpack_require__.e(0), __webpack_require__.e(2)]).then(__webpack_require__.bind(null, 146));
-  },
   "component---src-templates-product-index-js": function componentSrcTemplatesProductIndexJs() {
-    return Promise.all(/* import() | component---src-templates-product-index-js */[__webpack_require__.e(0), __webpack_require__.e(3)]).then(__webpack_require__.bind(null, 150));
+    return Promise.all(/* import() | component---src-templates-product-index-js */[__webpack_require__.e(0), __webpack_require__.e(2)]).then(__webpack_require__.bind(null, 150));
+  },
+  "component---src-templates-product-group-index-js": function componentSrcTemplatesProductGroupIndexJs() {
+    return Promise.all(/* import() | component---src-templates-product-group-index-js */[__webpack_require__.e(0), __webpack_require__.e(3)]).then(__webpack_require__.bind(null, 146));
   },
   "component---src-pages-404-js": function componentSrcPages404Js() {
     return Promise.all(/* import() | component---src-pages-404-js */[__webpack_require__.e(0), __webpack_require__.e(4)]).then(__webpack_require__.bind(null, 147));
@@ -7176,4 +7176,4 @@ Object(api_runner_browser["apiRunnerAsync"])("onClientEntry").then(function () {
 
 /***/ })
 ],[[145,7]]]);
-//# sourceMappingURL=app-03bdfdd47efe49a84284.js.map
+//# sourceMappingURL=app-772427d2bf2d24762150.js.map

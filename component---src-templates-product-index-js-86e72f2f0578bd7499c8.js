@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[3],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[2],{
 
 /***/ 150:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -7,7 +7,7 @@
 __webpack_require__.r(__webpack_exports__);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es6.function.name.js
-var es6_function_name = __webpack_require__(168);
+var es6_function_name = __webpack_require__(167);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es6.regexp.search.js
 var es6_regexp_search = __webpack_require__(53);
@@ -160,15 +160,16 @@ var ProductHero_ProductHero = function ProductHero(_ref) {
       text = _hero$.text,
       image = _hero$.image,
       cta = _hero$.cta;
-  var urlParams;
 
   var getColor = function getColor() {
     var bc = '0a84ff';
-    console.log('gek');
 
     if (typeof URLSearchParams === 'function') {
-      urlParams = new URLSearchParams(window.location.search);
-      bc = urlParams.has('button') && isValidHex(urlParams.get('button')) ? urlParams.get('button') : '0a84ff';
+      var urlParams = new URLSearchParams(window.location.search);
+
+      if (urlParams.has('button') && isValidHex(urlParams.get('button'))) {
+        bc = urlParams.get('button');
+      }
     }
 
     console.log(bc);
@@ -702,7 +703,7 @@ ProdPageRenderer.propTypes = {
 
 /***/ }),
 
-/***/ 168:
+/***/ 167:
 /***/ (function(module, exports, __webpack_require__) {
 
 var dP = __webpack_require__(25).f;
@@ -846,4 +847,4 @@ if (new Date(NaN) + '' != INVALID_DATE) {
 /***/ })
 
 }]);
-//# sourceMappingURL=component---src-templates-product-index-js-2495f7466fd0d84922e1.js.map
+//# sourceMappingURL=component---src-templates-product-index-js-86e72f2f0578bd7499c8.js.map
