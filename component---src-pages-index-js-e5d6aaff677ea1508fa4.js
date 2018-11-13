@@ -1,217 +1,19 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[2],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[5],{
 
-/***/ 150:
+/***/ 148:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-
-// EXTERNAL MODULE: ./node_modules/core-js/modules/es6.object.assign.js
-var es6_object_assign = __webpack_require__(33);
-
-// EXTERNAL MODULE: ./node_modules/core-js/modules/es6.function.name.js
-var es6_function_name = __webpack_require__(167);
-
-// EXTERNAL MODULE: ./node_modules/core-js/modules/es6.regexp.search.js
-var es6_regexp_search = __webpack_require__(53);
-
-// EXTERNAL MODULE: ./node_modules/react/index.js
-var react = __webpack_require__(0);
-var react_default = /*#__PURE__*/__webpack_require__.n(react);
-
-// EXTERNAL MODULE: ./src/components/Layout/index.js
-var Layout = __webpack_require__(155);
-
-// EXTERNAL MODULE: ./node_modules/core-js/modules/es6.array.map.js
-var es6_array_map = __webpack_require__(50);
-
-// EXTERNAL MODULE: ./node_modules/core-js/modules/es6.regexp.to-string.js
-var es6_regexp_to_string = __webpack_require__(177);
-
-// EXTERNAL MODULE: ./node_modules/core-js/modules/es6.date.to-string.js
-var es6_date_to_string = __webpack_require__(179);
-
-// CONCATENATED MODULE: ./src/utils/utils.js
-
-
-var isValidHex = function isValidHex(hex) {
-  return /(^[0-9A-F]{6}$)|(^[0-9A-F]{3}$)/i.test(hex);
-};
-var lightenDarkenColor = function lightenDarkenColor(col, amt) {
-  var usePound = false;
-
-  if (col[0] === '#') {
-    col = col.slice(1);
-    usePound = true;
-  }
-
-  var num = parseInt(col, 16);
-  var r = (num >> 16) + amt;
-  if (r > 255) r = 255;else if (r < 0) r = 0;
-  var b = (num >> 8 & 0x00FF) + amt;
-  if (b > 255) b = 255;else if (b < 0) b = 0;
-  var g = (num & 0x0000FF) + amt;
-  if (g > 255) g = 255;else if (g < 0) g = 0;
-  return (usePound ? '#' : '') + (g | b << 8 | r << 16).toString(16);
-};
-// EXTERNAL MODULE: ./src/templates/ProductFacets/index.scss
-var templates_ProductFacets = __webpack_require__(180);
-
-// CONCATENATED MODULE: ./src/templates/ProductFacets/index.js
-
-
-
-
-
-var ProductFacets_ProductFacets = function ProductFacets(_ref) {
-  var facets = _ref.facets,
-      color = _ref.color;
-  return react_default.a.createElement(react_default.a.Fragment, null, facets.map(function (facet, index) {
-    return react_default.a.createElement("div", {
-      className: "product-facet",
-      key: index
-    }, index % 2 === 0 && react_default.a.createElement("div", {
-      className: "product-facet__bg",
-      style: {
-        background: "linear-gradient(135deg, " + color + "," + lightenDarkenColor(color, -20) + ")"
-      }
-    }), react_default.a.createElement("section", null, react_default.a.createElement("div", {
-      className: "product-facet__content"
-    }, react_default.a.createElement("h2", null, facet.title), react_default.a.createElement("p", null, facet.text)), react_default.a.createElement("div", {
-      className: "product-facet__image"
-    }, react_default.a.createElement("img", {
-      alt: "",
-      src: facet.image.publicURL,
-      width: "100%",
-      height: "auto"
-    }))));
-  }));
-};
-
-/* harmony default export */ var src_templates_ProductFacets = (ProductFacets_ProductFacets);
-// EXTERNAL MODULE: ./.cache/gatsby-browser-entry.js
-var gatsby_browser_entry = __webpack_require__(152);
-
-// EXTERNAL MODULE: ./src/templates/ProductFooter/index.scss
-var templates_ProductFooter = __webpack_require__(181);
-
-// CONCATENATED MODULE: ./src/templates/ProductFooter/index.js
-
-
-
-
-var ProductFooter_ProductFooter = function ProductFooter() {
-  return react_default.a.createElement("footer", {
-    className: "product-footer"
-  }, react_default.a.createElement("h4", null, react_default.a.createElement(gatsby_browser_entry["Link"], {
-    to: "/"
-  }, "Legal")), react_default.a.createElement("h4", null, react_default.a.createElement(gatsby_browser_entry["Link"], {
-    to: "/"
-  }, "Privacy")), react_default.a.createElement("h4", null, react_default.a.createElement(gatsby_browser_entry["Link"], {
-    to: "/"
-  }, "Our Team")), react_default.a.createElement("h4", null, react_default.a.createElement(gatsby_browser_entry["Link"], {
-    to: "/"
-  }, "Careers")));
-};
-
-/* harmony default export */ var src_templates_ProductFooter = (ProductFooter_ProductFooter);
-// EXTERNAL MODULE: ./src/templates/ProductHeader/index.scss
-var templates_ProductHeader = __webpack_require__(182);
-
-// CONCATENATED MODULE: ./src/templates/ProductHeader/index.js
-
-
-
-
-
-var ProductHeader_ProductHeader = function ProductHeader(_ref) {
-  var name = _ref.name,
-      icon = _ref.icon;
-  return react_default.a.createElement("div", {
-    className: "product-header"
-  }, react_default.a.createElement("div", {
-    className: "product-header__container"
-  }, react_default.a.createElement("h2", null, react_default.a.createElement("span", {
-    className: "product-header__app-icon",
-    style: {
-      backgroundImage: "url(" + icon + ")"
-    }
-  }), name), react_default.a.createElement("ul", null, react_default.a.createElement("li", null, react_default.a.createElement(gatsby_browser_entry["Link"], {
-    to: "/"
-  }, "Learn More")), react_default.a.createElement("li", null, react_default.a.createElement(gatsby_browser_entry["Link"], {
-    to: "/"
-  }, "Our Story")), react_default.a.createElement("li", null, react_default.a.createElement(gatsby_browser_entry["Link"], {
-    to: "/"
-  }, "Download Now")))));
-};
-
-/* harmony default export */ var src_templates_ProductHeader = (ProductHeader_ProductHeader);
-// EXTERNAL MODULE: ./node_modules/core-js/modules/es6.function.bind.js
-var es6_function_bind = __webpack_require__(183);
-
-// EXTERNAL MODULE: ./src/templates/ProductHero/index.scss
-var templates_ProductHero = __webpack_require__(185);
-
-// CONCATENATED MODULE: ./src/templates/ProductHero/index.js
-
-
-
-var _this = undefined;
-
-
-
-
-
-
-var ProductHero_ProductHero = function ProductHero(_ref) {
-  var hero = _ref.hero;
-  var _hero$ = hero[0],
-      title = _hero$.title,
-      text = _hero$.text,
-      image = _hero$.image,
-      cta = _hero$.cta;
-  var bc = '0a84ff';
-
-  var getColor = function getColor() {
-    if (typeof URLSearchParams === 'function') {
-      var urlParams = new URLSearchParams(window.location.search);
-
-      if (urlParams.has('button') && isValidHex(urlParams.get('button'))) {
-        bc = urlParams.get('button');
-      }
-    }
-
-    _this.style.background = "#" + bc;
-  };
-
-  return react_default.a.createElement("div", {
-    className: "product-hero"
-  }, react_default.a.createElement("header", null, react_default.a.createElement("div", {
-    className: "product-hero__content"
-  }, react_default.a.createElement("h1", null, title), react_default.a.createElement("p", null, text), react_default.a.createElement(gatsby_browser_entry["Link"], {
-    to: "/"
-  }, console.log('rendering'), react_default.a.createElement("button", {
-    onload: getColor.bind(_this)
-  }, cta))), react_default.a.createElement("div", {
-    className: "product-hero__image"
-  }, react_default.a.createElement("img", {
-    src: image.publicURL,
-    alt: text,
-    width: "100%",
-    height: "auto"
-  }))));
-};
-
-/* harmony default export */ var src_templates_ProductHero = (ProductHero_ProductHero);
-// EXTERNAL MODULE: ./src/templates/Product/index.scss
-var templates_Product = __webpack_require__(186);
-
-// EXTERNAL MODULE: ./src/images/firefox-logo.png
-var firefox_logo = __webpack_require__(153);
-var firefox_logo_default = /*#__PURE__*/__webpack_require__.n(firefox_logo);
-
-// CONCATENATED MODULE: ./src/templates/Product/index.js
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "query", function() { return query; });
+/* harmony import */ var core_js_modules_es6_array_filter__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(79);
+/* harmony import */ var core_js_modules_es6_array_filter__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_array_filter__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(0);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(155);
+/* harmony import */ var _components_Footer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(161);
+/* harmony import */ var _components_Header__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(163);
+/* harmony import */ var _components_Products__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(165);
 
 
 
@@ -219,54 +21,31 @@ var firefox_logo_default = /*#__PURE__*/__webpack_require__.n(firefox_logo);
 
 
 
-
-
-
-
-
-
-var Product_Product = function Product(_ref) {
+var IndexPage = function IndexPage(_ref) {
   var data = _ref.data;
-  var urlParams, isFirefox, bgColor;
-  var classList = 'product';
-
-  if (typeof URLSearchParams === 'function') {
-    urlParams = new URLSearchParams(window.location.search);
-    isFirefox = urlParams.has('branding') && urlParams.get('branding') === 'firefox';
-    classList = isFirefox ? classList + " product--is-firefox" : classList;
-    bgColor = urlParams.has('bg') && isValidHex(urlParams.get('bg')) ? urlParams.get('bg') : 'd1e6f5';
-    urlParams.get('button');
-  } else {
-    bgColor = 'd1e6f5';
-  }
-
-  bgColor = "#" + bgColor;
-  var _data$markdownRemark$ = data.markdownRemark.frontmatter.product[0],
-      name = _data$markdownRemark$.name,
-      icon = _data$markdownRemark$.icon,
-      hero = _data$markdownRemark$.hero,
-      facets = _data$markdownRemark$.facets;
-  var productName = isFirefox ? "Firefox " + name : name;
-  var productIconPath = isFirefox ? firefox_logo_default.a : icon.publicURL;
-  return react_default.a.createElement(Layout["a" /* default */], {
-    rootClass: classList,
-    title: productName,
-    description: hero[0].title,
-    favicon: productIconPath
-  }, react_default.a.createElement(src_templates_ProductHeader, {
-    icon: productIconPath,
-    name: productName
-  }), react_default.a.createElement(src_templates_ProductHero, {
-    hero: hero
-  }), react_default.a.createElement(src_templates_ProductFacets, Object.assign({
-    facets: facets
-  }, {
-    color: bgColor
-  })), react_default.a.createElement(src_templates_ProductFooter, null));
+  var edges = data.allMarkdownRemark.edges.filter(function (edge) {
+    return edge.node.fields.slug !== '/project-template/';
+  });
+  console.log(edges);
+  var _data$site$siteMetada = data.site.siteMetadata,
+      title = _data$site$siteMetada.title,
+      description = _data$site$siteMetada.description;
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Layout__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"], {
+    meta: data.site.siteMetadata,
+    rootClass: "index",
+    title: title
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Header__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"], {
+    title: title,
+    description: description
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Products__WEBPACK_IMPORTED_MODULE_5__[/* default */ "a"], {
+    edges: edges
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Footer__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"], null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
+    href: data.site.siteMetadata.repo
+  }, "View Source")));
 };
 
-/* harmony default export */ var src_templates_Product = __webpack_exports__["default"] = (Product_Product);
-var query = "264460395";
+/* harmony default export */ __webpack_exports__["default"] = (IndexPage);
+var query = "25027325";
 
 /***/ }),
 
@@ -711,187 +490,122 @@ ProdPageRenderer.propTypes = {
 
 /***/ }),
 
-/***/ 167:
-/***/ (function(module, exports, __webpack_require__) {
-
-var dP = __webpack_require__(25).f;
-var FProto = Function.prototype;
-var nameRE = /^\s*function ([^ (]*)/;
-var NAME = 'name';
-
-// 19.2.4.2 name
-NAME in FProto || __webpack_require__(16) && dP(FProto, NAME, {
-  configurable: true,
-  get: function () {
-    try {
-      return ('' + this).match(nameRE)[1];
-    } catch (e) {
-      return '';
-    }
-  }
-});
-
-
-/***/ }),
-
-/***/ 169:
-/***/ (function(module, exports, __webpack_require__) {
+/***/ 161:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(0);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(162);
+/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_index_scss__WEBPACK_IMPORTED_MODULE_1__);
 
-// 21.2.5.3 get RegExp.prototype.flags
-var anObject = __webpack_require__(10);
-module.exports = function () {
-  var that = anObject(this);
-  var result = '';
-  if (that.global) result += 'g';
-  if (that.ignoreCase) result += 'i';
-  if (that.multiline) result += 'm';
-  if (that.unicode) result += 'u';
-  if (that.sticky) result += 'y';
-  return result;
+
+
+var Footer = function Footer(_ref) {
+  var children = _ref.children;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("footer", {
+    className: "footer"
+  }, children);
 };
 
+/* harmony default export */ __webpack_exports__["a"] = (Footer);
 
 /***/ }),
 
-/***/ 177:
+/***/ 162:
 /***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+
+/***/ 163:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(0);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var gatsby__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(152);
+/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(164);
+/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_index_scss__WEBPACK_IMPORTED_MODULE_2__);
 
-__webpack_require__(178);
-var anObject = __webpack_require__(10);
-var $flags = __webpack_require__(169);
-var DESCRIPTORS = __webpack_require__(16);
-var TO_STRING = 'toString';
-var $toString = /./[TO_STRING];
 
-var define = function (fn) {
-  __webpack_require__(17)(RegExp.prototype, TO_STRING, fn, true);
+
+
+var Header = function Header(_ref) {
+  var title = _ref.title,
+      description = _ref.description,
+      _ref$parent = _ref.parent,
+      parent = _ref$parent === void 0 ? null : _ref$parent;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", {
+    className: "header"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(gatsby__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "/"
+  }, title)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, description), parent && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "breadcrumb"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(gatsby__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "/"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "home"
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "\xA0\xA0\xBB\xA0\xA0"), " ", parent)));
 };
 
-// 21.2.5.14 RegExp.prototype.toString()
-if (__webpack_require__(18)(function () { return $toString.call({ source: 'a', flags: 'b' }) != '/a/b'; })) {
-  define(function toString() {
-    var R = anObject(this);
-    return '/'.concat(R.source, '/',
-      'flags' in R ? R.flags : !DESCRIPTORS && R instanceof RegExp ? $flags.call(R) : undefined);
-  });
-// FF44- RegExp#toString has a wrong name
-} else if ($toString.name != TO_STRING) {
-  define(function toString() {
-    return $toString.call(this);
-  });
-}
-
+/* harmony default export */ __webpack_exports__["a"] = (Header);
 
 /***/ }),
 
-/***/ 178:
-/***/ (function(module, exports, __webpack_require__) {
-
-// 21.2.5.3 get RegExp.prototype.flags()
-if (__webpack_require__(16) && /./g.flags != 'g') __webpack_require__(25).f(RegExp.prototype, 'flags', {
-  configurable: true,
-  get: __webpack_require__(169)
-});
-
-
-/***/ }),
-
-/***/ 179:
-/***/ (function(module, exports, __webpack_require__) {
-
-var DateProto = Date.prototype;
-var INVALID_DATE = 'Invalid Date';
-var TO_STRING = 'toString';
-var $toString = DateProto[TO_STRING];
-var getTime = DateProto.getTime;
-if (new Date(NaN) + '' != INVALID_DATE) {
-  __webpack_require__(17)(DateProto, TO_STRING, function toString() {
-    var value = getTime.call(this);
-    // eslint-disable-next-line no-self-compare
-    return value === value ? $toString.call(this) : INVALID_DATE;
-  });
-}
-
-
-/***/ }),
-
-/***/ 180:
+/***/ 164:
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
 
 /***/ }),
 
-/***/ 181:
-/***/ (function(module, exports, __webpack_require__) {
-
-// extracted by mini-css-extract-plugin
-
-/***/ }),
-
-/***/ 182:
-/***/ (function(module, exports, __webpack_require__) {
-
-// extracted by mini-css-extract-plugin
-
-/***/ }),
-
-/***/ 183:
-/***/ (function(module, exports, __webpack_require__) {
-
-// 19.2.3.2 / 15.3.4.5 Function.prototype.bind(thisArg, args...)
-var $export = __webpack_require__(6);
-
-$export($export.P, 'Function', { bind: __webpack_require__(184) });
-
-
-/***/ }),
-
-/***/ 184:
-/***/ (function(module, exports, __webpack_require__) {
+/***/ 165:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony import */ var core_js_modules_es6_array_map__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(50);
+/* harmony import */ var core_js_modules_es6_array_map__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_array_map__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(0);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var gatsby__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(152);
+/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(166);
+/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_index_scss__WEBPACK_IMPORTED_MODULE_3__);
 
-var aFunction = __webpack_require__(19);
-var isObject = __webpack_require__(11);
-var invoke = __webpack_require__(79);
-var arraySlice = [].slice;
-var factories = {};
 
-var construct = function (F, len, args) {
-  if (!(len in factories)) {
-    for (var n = [], i = 0; i < len; i++) n[i] = 'a[' + i + ']';
-    // eslint-disable-next-line no-new-func
-    factories[len] = Function('F,a', 'return new F(' + n.join(',') + ')');
-  } return factories[len](F, args);
+
+
+
+var Products = function Products(_ref) {
+  var edges = _ref.edges,
+      _ref$offerBranded = _ref.offerBranded,
+      offerBranded = _ref$offerBranded === void 0 ? false : _ref$offerBranded;
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("main", {
+    className: "products"
+  }, edges.map(function (edge, index) {
+    return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+      className: "products__card"
+    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", null, edge.node.frontmatter.title), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, edge.node.frontmatter.description), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+      className: "products__links"
+    }, !offerBranded && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(gatsby__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+      to: edge.node.fields.slug,
+      key: index
+    }, "View all versions \xBB"), offerBranded && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(gatsby__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+      to: edge.node.fields.slug,
+      key: "generic-" + index
+    }, "Generic"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(gatsby__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+      to: edge.node.fields.slug + "/?branding=firefox",
+      key: index
+    }, "Branded"))));
+  }));
 };
 
-module.exports = Function.bind || function bind(that /* , ...args */) {
-  var fn = aFunction(this);
-  var partArgs = arraySlice.call(arguments, 1);
-  var bound = function (/* args... */) {
-    var args = partArgs.concat(arraySlice.call(arguments));
-    return this instanceof bound ? construct(fn, args.length, args) : invoke(fn, args, that);
-  };
-  if (isObject(fn.prototype)) bound.prototype = fn.prototype;
-  return bound;
-};
-
+/* harmony default export */ __webpack_exports__["a"] = (Products);
 
 /***/ }),
 
-/***/ 185:
-/***/ (function(module, exports, __webpack_require__) {
-
-// extracted by mini-css-extract-plugin
-
-/***/ }),
-
-/***/ 186:
+/***/ 166:
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
@@ -899,4 +613,4 @@ module.exports = Function.bind || function bind(that /* , ...args */) {
 /***/ })
 
 }]);
-//# sourceMappingURL=component---src-templates-product-index-js-8fbd535efeb113eebf51.js.map
+//# sourceMappingURL=component---src-pages-index-js-e5d6aaff677ea1508fa4.js.map
