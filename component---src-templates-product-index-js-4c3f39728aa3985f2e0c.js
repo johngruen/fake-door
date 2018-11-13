@@ -164,6 +164,7 @@ var ProductHero_ProductHero = function ProductHero(_ref) {
 
   var getColor = function getColor() {
     var bc;
+    console.log('gek');
 
     if (typeof URLSearchParams === 'function') {
       urlParams = new URLSearchParams(window.location.search);
@@ -181,7 +182,7 @@ var ProductHero_ProductHero = function ProductHero(_ref) {
     className: "product-hero__content"
   }, react_default.a.createElement("h1", null, title), react_default.a.createElement("p", null, text), react_default.a.createElement(gatsby_browser_entry["Link"], {
     to: "/"
-  }, react_default.a.createElement("button", {
+  }, console.log('rendering'), react_default.a.createElement("button", {
     style: {
       backgroundColor: getColor()
     }
@@ -846,4 +847,4 @@ if (new Date(NaN) + '' != INVALID_DATE) {
 /***/ })
 
 }]);
-//# sourceMappingURL=component---src-templates-product-index-js-063d58c3b5bcd2f17980.js.map
+//# sourceMappingURL=component---src-templates-product-index-js-4c3f39728aa3985f2e0c.js.map
