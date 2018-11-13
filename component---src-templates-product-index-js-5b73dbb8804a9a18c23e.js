@@ -160,10 +160,9 @@ var ProductHero_ProductHero = function ProductHero(_ref) {
       text = _hero$.text,
       image = _hero$.image,
       cta = _hero$.cta;
+  var bc = '0a84ff';
 
   var getColor = function getColor() {
-    var bc = '0a84ff';
-
     if (typeof URLSearchParams === 'function') {
       var urlParams = new URLSearchParams(window.location.search);
 
@@ -847,4 +846,4 @@ if (new Date(NaN) + '' != INVALID_DATE) {
 /***/ })
 
 }]);
-//# sourceMappingURL=component---src-templates-product-index-js-86e72f2f0578bd7499c8.js.map
+//# sourceMappingURL=component---src-templates-product-index-js-5b73dbb8804a9a18c23e.js.map
