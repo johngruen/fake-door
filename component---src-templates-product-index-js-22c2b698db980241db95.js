@@ -164,7 +164,7 @@ var ProductHero_ProductHero = function ProductHero(_ref) {
     className: "product-hero"
   }, react_default.a.createElement("header", null, react_default.a.createElement("div", {
     className: "product-hero__content"
-  }, react_default.a.createElement("h1", null, title), react_default.a.createElement("p", null, text), react_default.a.createElement(gatsby_browser_entry["Link"], {
+  }, react_default.a.createElement("h1", null, title), react_default.a.createElement("p", null, text), react_default.a.createElement("p", null, buttonColor), react_default.a.createElement(gatsby_browser_entry["Link"], {
     to: "/"
   }, react_default.a.createElement("button", {
     style: {
@@ -835,4 +835,4 @@ if (new Date(NaN) + '' != INVALID_DATE) {
 /***/ })
 
 }]);
-//# sourceMappingURL=component---src-templates-product-index-js-e2d459673e1ad39dfa32.js.map
+//# sourceMappingURL=component---src-templates-product-index-js-22c2b698db980241db95.js.map
