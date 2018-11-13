@@ -160,19 +160,18 @@ var ProductHero_ProductHero = function ProductHero(_ref) {
       text = _hero$.text,
       image = _hero$.image,
       cta = _hero$.cta;
-  var urlParams, buttonColor;
+  var urlParams;
 
   var getColor = function getColor() {
-    var bc;
+    var bc = '0a84ff';
     console.log('gek');
 
     if (typeof URLSearchParams === 'function') {
       urlParams = new URLSearchParams(window.location.search);
       bc = urlParams.has('button') && isValidHex(urlParams.get('button')) ? urlParams.get('button') : '0a84ff';
-    } else {
-      bc = '0a84ff';
     }
 
+    console.log(bc);
     return "#" + bc;
   };
 
@@ -847,4 +846,4 @@ if (new Date(NaN) + '' != INVALID_DATE) {
 /***/ })
 
 }]);
-//# sourceMappingURL=component---src-templates-product-index-js-4c3f39728aa3985f2e0c.js.map
+//# sourceMappingURL=component---src-templates-product-index-js-2495f7466fd0d84922e1.js.map
