@@ -1,0 +1,1 @@
+.layout{display:grid;min-height:100vh}.layout--index,.layout--productGroup{color:#fff;grid-gap:32px;grid-template-rows:auto 1fr;padding:24px}.layout--index{background:linear-gradient(135deg,#0a84ff,#00c8d7)}.layout--productGroup{background:linear-gradient(135deg,#363959,#595e91)}.layout--product{-webkit-animation:fade-in .5s forwards;animation:fade-in .5s forwards}
