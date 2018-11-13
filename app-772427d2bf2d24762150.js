@@ -3134,11 +3134,11 @@ var preferDefault = function preferDefault(m) {
 };
 
 exports.components = {
-  "component---src-templates-product-group-index-js": function componentSrcTemplatesProductGroupIndexJs() {
-    return Promise.all(/* import() | component---src-templates-product-group-index-js */[__webpack_require__.e(0), __webpack_require__.e(2)]).then(__webpack_require__.bind(null, 146));
-  },
   "component---src-templates-product-index-js": function componentSrcTemplatesProductIndexJs() {
-    return Promise.all(/* import() | component---src-templates-product-index-js */[__webpack_require__.e(0), __webpack_require__.e(3)]).then(__webpack_require__.bind(null, 150));
+    return Promise.all(/* import() | component---src-templates-product-index-js */[__webpack_require__.e(0), __webpack_require__.e(2)]).then(__webpack_require__.bind(null, 150));
+  },
+  "component---src-templates-product-group-index-js": function componentSrcTemplatesProductGroupIndexJs() {
+    return Promise.all(/* import() | component---src-templates-product-group-index-js */[__webpack_require__.e(0), __webpack_require__.e(3)]).then(__webpack_require__.bind(null, 146));
   },
   "component---src-pages-404-js": function componentSrcPages404Js() {
     return Promise.all(/* import() | component---src-pages-404-js */[__webpack_require__.e(0), __webpack_require__.e(4)]).then(__webpack_require__.bind(null, 147));
@@ -3206,6 +3206,22 @@ module.exports = _defineProperty;
 
 /***/ }),
 /* 53 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// @@search logic
+__webpack_require__(26)('search', 1, function (defined, SEARCH, $search) {
+  // 21.1.3.15 String.prototype.search(regexp)
+  return [function search(regexp) {
+    'use strict';
+    var O = defined(this);
+    var fn = regexp == undefined ? undefined : regexp[SEARCH];
+    return fn !== undefined ? fn.call(regexp, O) : new RegExp(regexp)[SEARCH](String(O));
+  }, $search];
+});
+
+
+/***/ }),
+/* 54 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3275,22 +3291,6 @@ PageRenderer.propTypes = {
   pageContext: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object.isRequired
 };
 /* harmony default export */ __webpack_exports__["a"] = (PageRenderer);
-
-/***/ }),
-/* 54 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// @@search logic
-__webpack_require__(26)('search', 1, function (defined, SEARCH, $search) {
-  // 21.1.3.15 String.prototype.search(regexp)
-  return [function search(regexp) {
-    'use strict';
-    var O = defined(this);
-    var fn = regexp == undefined ? undefined : regexp[SEARCH];
-    return fn !== undefined ? fn.call(regexp, O) : new RegExp(regexp)[SEARCH](String(O));
-  }, $search];
-});
-
 
 /***/ }),
 /* 55 */
@@ -6570,7 +6570,7 @@ if (window.location.protocol !== "https:" && window.location.hostname !== "local
 __webpack_require__.r(__webpack_exports__);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es6.regexp.search.js
-var es6_regexp_search = __webpack_require__(54);
+var es6_regexp_search = __webpack_require__(53);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es6.regexp.match.js
 var es6_regexp_match = __webpack_require__(58);
@@ -6910,7 +6910,7 @@ navigation_RouteUpdates.propTypes = {
 };
 
 // EXTERNAL MODULE: ./.cache/page-renderer.js
-var page_renderer = __webpack_require__(53);
+var page_renderer = __webpack_require__(54);
 
 // EXTERNAL MODULE: ./.cache/async-requires.js
 var async_requires = __webpack_require__(49);
@@ -7176,4 +7176,4 @@ Object(api_runner_browser["apiRunnerAsync"])("onClientEntry").then(function () {
 
 /***/ })
 ],[[145,7]]]);
-//# sourceMappingURL=app-b0389725698c0b4e5952.js.map
+//# sourceMappingURL=app-772427d2bf2d24762150.js.map

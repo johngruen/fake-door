@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[3],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[2],{
 
 /***/ 150:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -7,10 +7,10 @@
 __webpack_require__.r(__webpack_exports__);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es6.function.name.js
-var es6_function_name = __webpack_require__(168);
+var es6_function_name = __webpack_require__(167);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es6.regexp.search.js
-var es6_regexp_search = __webpack_require__(54);
+var es6_regexp_search = __webpack_require__(53);
 
 // EXTERNAL MODULE: ./node_modules/react/index.js
 var react = __webpack_require__(0);
@@ -151,15 +151,25 @@ var templates_ProductHero = __webpack_require__(183);
 
 
 
+
+
 var ProductHero_ProductHero = function ProductHero(_ref) {
-  var hero = _ref.hero,
-      buttonColor = _ref.buttonColor;
+  var hero = _ref.hero;
   var _hero$ = hero[0],
       title = _hero$.title,
       text = _hero$.text,
       image = _hero$.image,
       cta = _hero$.cta;
-  var color = buttonColor;
+  var urlParams, buttonColor;
+
+  if (typeof URLSearchParams === 'function') {
+    urlParams = new URLSearchParams(window.location.search);
+    buttonColor = urlParams.has('button') && isValidHex(urlParams.get('button')) ? urlParams.get('button') : '0a84ff';
+  } else {
+    buttonColor = '0a84ff';
+  }
+
+  buttonColor = "#" + buttonColor;
   return react_default.a.createElement("div", {
     className: "product-hero"
   }, react_default.a.createElement("header", null, react_default.a.createElement("div", {
@@ -168,7 +178,7 @@ var ProductHero_ProductHero = function ProductHero(_ref) {
     to: "/"
   }, react_default.a.createElement("button", {
     style: {
-      backgroundColor: color
+      backgroundColor: buttonColor
     }
   }, cta))), react_default.a.createElement("div", {
     className: "product-hero__image"
@@ -204,7 +214,7 @@ var firefox_logo_default = /*#__PURE__*/__webpack_require__.n(firefox_logo);
 
 var Product_Product = function Product(_ref) {
   var data = _ref.data;
-  var urlParams, isFirefox, bgColor, buttonColor;
+  var urlParams, isFirefox, bgColor;
   var classList = 'product';
 
   if (typeof URLSearchParams === 'function') {
@@ -212,15 +222,12 @@ var Product_Product = function Product(_ref) {
     isFirefox = urlParams.has('branding') && urlParams.get('branding') === 'firefox';
     classList = isFirefox ? classList + " product--is-firefox" : classList;
     bgColor = urlParams.has('bg') && isValidHex(urlParams.get('bg')) ? urlParams.get('bg') : 'd1e6f5';
-    buttonColor = urlParams.has('button') && isValidHex(urlParams.get('button')) ? urlParams.get('button') : '0a84ff';
     urlParams.get('button');
   } else {
     bgColor = 'd1e6f5';
-    buttonColor = '0a84ff';
   }
 
   bgColor = "#" + bgColor;
-  buttonColor = "#" + buttonColor;
   var _data$markdownRemark$ = data.markdownRemark.frontmatter.product[0],
       name = _data$markdownRemark$.name,
       icon = _data$markdownRemark$.icon,
@@ -236,9 +243,8 @@ var Product_Product = function Product(_ref) {
   }, react_default.a.createElement(src_templates_ProductHeader, {
     icon: productIconPath,
     name: productName
-  }), "]   ", react_default.a.createElement("h1", null, buttonColor), react_default.a.createElement(src_templates_ProductHero, {
-    hero: hero,
-    buttonColor: buttonColor
+  }), react_default.a.createElement(src_templates_ProductHero, {
+    hero: hero
   }), react_default.a.createElement(src_templates_ProductFacets, {
     facets: facets,
     bgColor: bgColor
@@ -665,7 +671,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(4);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _page_renderer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(53);
+/* harmony import */ var _page_renderer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(54);
 /* harmony import */ var _loader__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(2);
 
 
@@ -691,7 +697,7 @@ ProdPageRenderer.propTypes = {
 
 /***/ }),
 
-/***/ 168:
+/***/ 167:
 /***/ (function(module, exports, __webpack_require__) {
 
 var dP = __webpack_require__(25).f;
@@ -835,4 +841,4 @@ if (new Date(NaN) + '' != INVALID_DATE) {
 /***/ })
 
 }]);
-//# sourceMappingURL=component---src-templates-product-index-js-d9a6b8f07595779e2c4b.js.map
+//# sourceMappingURL=component---src-templates-product-index-js-be710b2b6b9e8a2b5635.js.map
