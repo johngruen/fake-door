@@ -6,6 +6,9 @@
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
+// EXTERNAL MODULE: ./node_modules/core-js/modules/es6.object.assign.js
+var es6_object_assign = __webpack_require__(33);
+
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es6.function.name.js
 var es6_function_name = __webpack_require__(167);
 
@@ -62,7 +65,7 @@ var templates_ProductFacets = __webpack_require__(180);
 
 var ProductFacets_ProductFacets = function ProductFacets(_ref) {
   var facets = _ref.facets,
-      bgColor = _ref.bgColor;
+      color = _ref.color;
   return react_default.a.createElement(react_default.a.Fragment, null, facets.map(function (facet, index) {
     return react_default.a.createElement("div", {
       className: "product-facet",
@@ -70,7 +73,7 @@ var ProductFacets_ProductFacets = function ProductFacets(_ref) {
     }, index % 2 === 0 && react_default.a.createElement("div", {
       className: "product-facet__bg",
       style: {
-        background: "linear-gradient(135deg, " + bgColor + "," + lightenDarkenColor(bgColor, -20) + ")"
+        background: "linear-gradient(135deg, " + color + "," + lightenDarkenColor(color, -20) + ")"
       }
     }), react_default.a.createElement("section", null, react_default.a.createElement("div", {
       className: "product-facet__content"
@@ -217,6 +220,7 @@ var firefox_logo_default = /*#__PURE__*/__webpack_require__.n(firefox_logo);
 
 
 
+
 var Product_Product = function Product(_ref) {
   var data = _ref.data;
   var urlParams, isFirefox, bgColor;
@@ -250,10 +254,11 @@ var Product_Product = function Product(_ref) {
     name: productName
   }), react_default.a.createElement(src_templates_ProductHero, {
     hero: hero
-  }), react_default.a.createElement(src_templates_ProductFacets, {
-    facets: facets,
-    bgColor: bgColor
-  }), react_default.a.createElement(src_templates_ProductFooter, null));
+  }), react_default.a.createElement(src_templates_ProductFacets, Object.assign({
+    facets: facets
+  }, {
+    color: bgColor
+  })), react_default.a.createElement(src_templates_ProductFooter, null));
 };
 
 /* harmony default export */ var src_templates_Product = __webpack_exports__["default"] = (Product_Product);
@@ -846,4 +851,4 @@ if (new Date(NaN) + '' != INVALID_DATE) {
 /***/ })
 
 }]);
-//# sourceMappingURL=component---src-templates-product-index-js-5b73dbb8804a9a18c23e.js.map
+//# sourceMappingURL=component---src-templates-product-index-js-31996d2665a7d3acd6c6.js.map
