@@ -5,19 +5,24 @@ import './index.scss'
 const ProductHero = ({ hero, buttonColor }) => {
   const { title, text, image, cta } = hero[0]
   return (
-    <div className="product-hero">
-      <header>
-        <div className="product-hero__content">
+    <section className="mzp-c-hero mzp-has-image">
+      <div className="mzp-l-content">
+        <div className="mzp-c-hero-body">
           <h1>{title}</h1>
-          <p>{text}</p>
-          {/* HACK: Gatsby will precompile css, so we force it not to */}
-          {typeof window !== 'undefined' && <Link to="/"><button style={{backgroundColor: buttonColor}}>{cta}</button></Link>}
+          <div class="mzp-c-hero-desc">
+            <p>{text}</p>
+          </div>
+          <p class="mzp-c-hero-cta">
+            <a class="mzp-c-button" href="#">
+              {cta}
+            </a>
+          </p>
         </div>
-        <div className="product-hero__image">
-          <img src={image.publicURL} alt={text} width="100%" height="auto" />
-        </div>
-      </header>
-    </div>
+      </div>
+      <div className="mzp-c-hero-image">
+        <img src={image.publicURL} alt={text} width="100%" height="auto" />
+      </div>
+    </section>
   )
 }
 

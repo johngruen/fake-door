@@ -1,26 +1,19 @@
 @import '~photon-colors/photon-colors';
+@import '~@mozilla-protocol/core/protocol/css/protocol.css';
+@import '~@mozilla-protocol/core/protocol/css/protocol-extra.css';
 
-.layout {
-  display: grid;
-  min-height: 100vh;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+* {
+  font-family: "Sharp Sans TRIAL", fantasy;
+  line-height: 1.2;
 }
 
-.layout--index,
-.layout--productGroup {
-  color: $white-100;
-  grid-gap: 32px;
-  grid-template-rows: auto 1fr;
-  padding: 24px;
-}
-
-.layout--index {
-  background: linear-gradient(135deg, $blue-50, $teal-60);
-}
-
-.layout--productGroup {
-  background: linear-gradient(135deg, $ink-70, $ink-50);
-}
-
-.layout--product {
-  animation: fade-in 500ms forwards;
+p {
+  font-size: 20px;
+  line-height: 32px;
 }
